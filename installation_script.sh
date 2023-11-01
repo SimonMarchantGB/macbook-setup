@@ -68,18 +68,21 @@ echo "# Set zsh option for prompt substitution" >> ~/.zshrc
 echo "setopt PROMPT_SUBST" >> ~/.zshrc
 echo "export PROMPT='${COLOR_USR}%n@%M ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '" >> ~/.zshrc
 
+echo '' >> ~/.zshrc
 echo "Configuring terminal history behaviour..."
 echo "#start of history autocomplete" >> ~/.zshrc
 echo "# Original setup guide for history: https://devpress.csdn.net/linux/62ebc10e89d9027116a0f763.html" >> ~/.zshrc
 echo "# initialize autocompletion" >> ~/.zshrc
 echo "autoload -U compinit && compinit" >> ~/.zshrc
 
+echo '' >> ~/.zshrc
 echo "# history setup" >> ~/.zshrc
 echo "setopt SHARE_HISTORY" >> ~/.zshrc
 echo "HISTFILE=$HOME/.zhistory" >> ~/.zshrc
 echo "SAVEHIST=1000000" >> ~/.zshrc
 echo "HISTSIZE=1000000" >> ~/.zshrc
 
+echo '' >> ~/.zshrc
 echo "# The meaning of these options can be found in man page of `zshoptions`." >> ~/.zshrc
 echo "setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list" >> ~/.zshrc
 echo "setopt HIST_SAVE_NO_DUPS  # do not save duplicated command" >> ~/.zshrc
@@ -88,11 +91,13 @@ echo "setopt INC_APPEND_HISTORY_TIME  # append command to history file immediate
 echo "setopt EXTENDED_HISTORY  # record command start time" >> ~/.zshrc
 echo "setopt HIST_EXPIRE_DUPS_FIRST" >> ~/.zshrc
 
+echo '' >> ~/.zshrc
 echo "# autocompletion using arrow keys (based on history)" >> ~/.zshrc
 echo "bindkey '\e[A' history-search-backward" >> ~/.zshrc
 echo "bindkey '\e[B' history-search-forward" >> ~/.zshrc
 echo "#end of history automcomplete" >> ~/.zshrc
 
+echo '' >> ~/.zshrc
 #Configure NVM add more dependencies
 echo "Configuring NVM..."
 mkdir ~/.nvm
