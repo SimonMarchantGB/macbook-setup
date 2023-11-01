@@ -69,6 +69,7 @@ echo "setopt PROMPT_SUBST" >> ~/.zshrc
 echo "export PROMPT='${COLOR_USR}%n@%M ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '" >> ~/.zshrc
 
 echo "Configuring terminal history behaviour..."
+echo "#start of history autocomplete" >> ~/.zshrc
 echo "# Original setup guide for history: https://devpress.csdn.net/linux/62ebc10e89d9027116a0f763.html" >> ~/.zshrc
 echo "# initialize autocompletion" >> ~/.zshrc
 echo "autoload -U compinit && compinit" >> ~/.zshrc
@@ -87,6 +88,11 @@ echo "setopt INC_APPEND_HISTORY_TIME  # append command to history file immediate
 echo "setopt EXTENDED_HISTORY  # record command start time" >> ~/.zshrc
 echo "setopt HIST_EXPIRE_DUPS_FIRST" >> ~/.zshrc
 
+echo "# autocompletion using arrow keys (based on history)" >> ~/.zshrc
+echo "bindkey '\e[A' history-search-backward" >> ~/.zshrc
+echo "bindkey '\e[B' history-search-forward" >> ~/.zshrc
+echo "#end of history automcomplete" >> ~/.zshrc
+
 #Configure NVM add more dependencies
 echo "Configuring NVM..."
 mkdir ~/.nvm
@@ -103,18 +109,18 @@ echo "Adding the fuckery to .zshrc for thefuck command..."
 echo 'eval $(thefuck --alias)' >> ~/.zshrc
 echo '' >> ~/.zshrc
 echo "Setting up aliases..."
-echo '#Setup Aliases' >> ~/.zshrc
+echo '#Aliases' >> ~/.zshrc
 echo 'alias main="git checkout main && git pull"' >> ~/.zshrc
 echo 'alias pull="git pull"' >> ~/.zshrc
 echo 'alias push="git push"' >> ~/.zshrc
 echo 'alias fetch="git fetch"' >> ~/.zshrc
 echo 'alias show="git show"' >> ~/.zshrc
 echo 'alias log="git log"' >> ~/.zshrc
+echo 'alias status="git status"' >> ~/.zshrc
 echo 'alias history="fc -l 1"' >> ~/.zshrc
-echo 'alias playaws="export AWS_PROFILE=sso-debz-play && aws sso login"' >> ~/.zshrc
-echo 'alias prodaws="export AWS_PROFILE=sso-debz-prod && aws sso login"' >> ~/.zshrc
-echo 'alias devaws="export AWS_PROFILE=sso-debz-dev && aws sso login"' >> ~/.zshrc
-echo 'alias sharedaws="export AWS_PROFILE=sso-debz-shared && aws sso login"' >> ~/.zshrc
+echo 'alias uataws="export AWS_PROFILE=uat"' >> ~/.zshrc
+echo 'alias prodaws="export AWS_PROFILE=prod"' >> ~/.zshrc
+echo 'alias repo="cd ~/code/repo && git pull"' >> ~/.zshrc
 
 
 # Restart the Finder to apply changes
