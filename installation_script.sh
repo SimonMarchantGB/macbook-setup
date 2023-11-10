@@ -23,6 +23,7 @@ apps_to_install=(
   sublime-text
   authy
   thefuck
+  postman
 )
 
 # Iterate through the list and install each application
