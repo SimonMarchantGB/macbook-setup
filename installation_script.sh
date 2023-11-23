@@ -24,6 +24,8 @@ apps_to_install=(
   authy
   thefuck
   postman
+  docker
+  whatsapp
 )
 
 # Iterate through the list and install each application
@@ -123,7 +125,9 @@ echo 'alias fetch="git fetch"' >> ~/.zshrc
 echo 'alias show="git show"' >> ~/.zshrc
 echo 'alias log="git log"' >> ~/.zshrc
 echo 'alias status="git status"' >> ~/.zshrc
+echo 'alias stash="git stash"' >> ~/.zshrc
 echo 'alias history="fc -l 1"' >> ~/.zshrc
+echo 'alias zshme="open ~/.zshrc"' >> ~/.zshrc
 echo 'alias uataws="export AWS_PROFILE=uat"' >> ~/.zshrc
 echo 'alias prodaws="export AWS_PROFILE=prod"' >> ~/.zshrc
 echo 'alias repo="cd ~/code/repo && git pull"' >> ~/.zshrc
