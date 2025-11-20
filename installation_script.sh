@@ -12,6 +12,7 @@ apps_to_install=(
   gh
   nvm
   python
+  claude
   typescript
   volta
   aws-cdk
